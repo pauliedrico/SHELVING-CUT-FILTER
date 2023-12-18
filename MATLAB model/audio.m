@@ -1,0 +1,13 @@
+G=-30;
+fs=44100;
+fc=300;
+V0=10^(G/20);
+aB=(tan(2*pi*fc/fs)-1)/(tan(2*pi*fc/fs)+1);
+aC=(tan(2*pi*fc/fs)-V0)/(tan(2*pi*fc/fs)+V0);
+a=aC;
+H0=V0-1;
+% f=fopen("test2.raw",'r');
+% fseek(f,0,"bof");
+% all_contents=fread(f,'bit8=>sint8')';
+% t=linspace(0,2.656,234294);
+% dati=[t ; all_contents];
